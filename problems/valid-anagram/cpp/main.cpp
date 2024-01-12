@@ -1,5 +1,5 @@
 #include <string>
-#include <vector>
+#include <unordered_map>
 
 class Solution {
 public:
@@ -7,7 +7,6 @@ public:
     if (s.size() != t.size()) {
       return false;
     }
-    std::vector<uint> counts(26, 0);
     std::unordered_map<char, uint> counts(s.size());
     for (const auto c : s) {
       if (const auto found = counts.find(c); found == counts.end()) {

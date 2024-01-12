@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         cheapest = int(1e4)
@@ -9,4 +10,3 @@ class Solution:
             current_profit = p - cheapest
             profit = max(profit, current_profit)
         return profit
-
