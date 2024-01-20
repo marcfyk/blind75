@@ -7,7 +7,7 @@ is an array of anagrams.
 
 ## Solution
 
-Time complexity: $O(n)$
+Time complexity: $O(n\log k)$, where $k$ is the length of the strings in $strs$
 
 Space complexity: $O(n)$
 
