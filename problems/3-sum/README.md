@@ -2,7 +2,7 @@
 
 ## Objective
 
-Obtain all triplets of numbers $(x, y, z)$ in a list, $nums$, where $x + y + z = 0$.
+Obtain all triplets of numbers $(x, y, z)$ in an array, $nums$, where $x + y + z = 0$.
 
 The results of $(x_i, y_j, z_k)$ should not contain duplicates.
 
