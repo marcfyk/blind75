@@ -6,7 +6,7 @@ class Solution:
         cheapest = int(1e4)
         profit = 0
         for p in prices:
-            cheapest = min(cheapest, p)
             current_profit = p - cheapest
+            cheapest = min(cheapest, p)
             profit = max(profit, current_profit)
         return profit

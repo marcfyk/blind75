@@ -8,8 +8,8 @@ public:
     auto cheapest = max_price;
     auto profit = 0;
     for (const auto p : prices) {
-      cheapest = std::min(cheapest, p);
       const auto current_profit = p - cheapest;
+      cheapest = std::min(cheapest, p);
       profit = std::max(profit, current_profit);
     }
     return profit;
