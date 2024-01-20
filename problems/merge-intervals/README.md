@@ -17,7 +17,7 @@ Auxiliary complexity: $O(1)$
 
 First, we sort the intervals by their left bound, $start_i$.
 This allows us to find the non-overlapping intervals in one pass.
-Each $interval_i$ is either overlaps $interval_{i \minus 1}$ or it doesn't.
+Each $interval_i$ is either overlaps $interval_{i - 1}$ or it doesn't.
 
 We collect our array of non-overlapping intervals in $output$.
 
