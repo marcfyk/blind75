@@ -23,7 +23,7 @@ be the left and right bounds of our search space within $nums$.
 We start with $left = 0, right = \text{nums.length - 1}$, which means our
 search space is the whole array.
 Then, we compute the middle index, $mid$, between $left$ and $right$.
-$mid = \floor{(left + right) / 2}$.
+$mid = \lfloor (left + right) / 2 \rfloor $.
 Then, we compare $nums[mid]$ to $target$ to see if we have found our result,
 much like normal binary search.
 If $nums[mid] = target$, then $mid$ is the answer.
