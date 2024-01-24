@@ -12,6 +12,7 @@ impl Solution {
             if nums[left] <= nums[mid] {
                 left = mid + 1;
             } else {
+                left += 1;
                 right = mid;
             }
         }

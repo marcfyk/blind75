@@ -13,6 +13,7 @@ public:
       if (nums[left] <= nums[mid]) {
         left = mid + 1;
       } else {
+        ++left;
         right = mid;
       }
     }
