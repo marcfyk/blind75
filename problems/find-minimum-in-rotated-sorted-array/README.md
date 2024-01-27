@@ -7,7 +7,7 @@ find the smallest element in the array element in the array.
 
 ## Solution
 
-Time complexity: $O($\log n$)$
+Time complexity: $O(\log n)$
 
 Space complexity: $O(n)$
 
