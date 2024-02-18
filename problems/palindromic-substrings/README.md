@@ -14,8 +14,8 @@ Auxiliary space: $O(1)$
 
 > Naively solving the number of palindromic substrings would be $O(n^3)$ by doing
 the following steps,
->1. $\forall s[i] \in s, 0 \lte i \lt length(s), c = s[i]$, 
->2. $\forall c[j], i \lte j \lt length(s)$,
+>1. $\forall s[i] \in s, 0 \le i \lt length(s), c = s[i]$, 
+>2. $\forall c[j], i \le j \lt length(s)$,
 >3. $\forall c[i..j]$, we iterate all letters within these indexes to determine if $c[i..j]$ is a palindrome, and counting it if so.
 >
 > The naive solution seeks to iterate each $\forall c \in s$, and find all palindromic
