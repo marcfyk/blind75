@@ -10,11 +10,7 @@ func groupAnagrams(strs []string) [][]string {
 			return rs[i] < rs[j]
 		})
 		key := string(rs)
-		if g, ok := groups[key]; !ok {
-			groups[key] = []string{s}
-		} else {
-			groups[key] = append(g, s)
-		}
+		groups[key] = append(groups[key], s)
 	}
 	result := make([][]string, 0, len(groups))
 	for _, group := range groups {
