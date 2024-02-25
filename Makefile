@@ -10,9 +10,9 @@ usage:
 	@echo 'rust       Builds Rust template'
 
 cpp:
-	ifndef PROBLEM 
+ifndef PROBLEM 
 	$(error PROBLEM is not set)
-	endif
+endif
 	$(eval DIR = ./problems/$(PROBLEM)/cpp)
 	$(eval TARGET = $(DIR)/main.cpp)
 	@echo 'creating template at $(TARGET)'
@@ -21,9 +21,9 @@ cpp:
 	@echo 'done'
 
 go:
-	ifndef PROBLEM 
+ifndef PROBLEM 
 	$(error PROBLEM is not set)
-	endif
+endif
 	$(eval DIR = ./problems/$(PROBLEM)/go)
 	$(eval TARGET = $(DIR)/main.go)
 	@echo 'creating template at $(TARGET)'
@@ -33,9 +33,9 @@ go:
 	@echo 'done'
 
 python:
-	ifndef PROBLEM 
+ifndef PROBLEM 
 	$(error PROBLEM is not set)
-	endif
+endif
 	$(eval DIR = ./problems/$(PROBLEM)/python)
 	$(eval TARGET = $(DIR)/main.py)
 	@echo 'creating template at $(TARGET)'
@@ -44,9 +44,9 @@ python:
 	@echo 'done'
 
 rust:
-	ifndef PROBLEM 
+ifndef PROBLEM 
 	$(error PROBLEM is not set)
-	endif
+endif
 	$(eval DIR = ./problems/$(PROBLEM))
 	$(eval TARGET = $(DIR)/rust/src/lib.rs)
 	@echo 'creating template at $(TARGET)'
