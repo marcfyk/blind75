@@ -11,12 +11,7 @@ public:
     for (const auto s : strs) {
       auto key = s;
       std::sort(key.begin(), key.end());
-      if (const auto found = groups.find(key); found == groups.end()) {
-        std::vector<std::string> data{s};
-        groups[key] = data;
-      } else {
-        found->second.push_back(s);
-      }
+      groups[key].push_back(s);
     }
     std::vector<std::vector<std::string>> anagram_groups;
     anagram_groups.reserve(groups.size());
