@@ -4,10 +4,11 @@ pub struct Solution;
 
 impl Solution {
     pub fn merge(mut intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-        let results = Vec::with_capacity(intervals.len());
         intervals.sort_by(|x, y| x[0].cmp(&y[0]));
+        let results = vec![vec![intervals[0][0], intervals[0][1]]];
         intervals
             .into_iter()
+            .skip(1)
             .fold(results, |mut results, interval| {
                 match results.last_mut() {
                     None => {
@@ -29,4 +30,3 @@ impl Solution {
             })
     }
 }
-
