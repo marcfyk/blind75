@@ -8,8 +8,8 @@ impl Solution {
         let mut overall_max = MIN;
         let mut curr_max = MIN;
         for n in nums {
-            curr_max = cmp::max(curr_max+n, n);
-            overall_max=cmp::max(overall_max, curr_max);
+            curr_max = cmp::max(curr_max + n, n);
+            overall_max = cmp::max(overall_max, curr_max);
         }
         overall_max
     }
