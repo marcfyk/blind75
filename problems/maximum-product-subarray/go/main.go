@@ -12,5 +12,5 @@ func maxProduct(nums []int) int {
 		largest = max(smallestWithN, largestWithN, n)
 		best = max(best, largest)
 	}
-    return best
+	return best
 }
