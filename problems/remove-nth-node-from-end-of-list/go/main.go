@@ -28,7 +28,7 @@ func getListSize(head *ListNode) int {
 	size := 0
 	node := head
 	for node != nil {
-		size += 1
+		size++
 		node = node.Next
 	}
 	return size
