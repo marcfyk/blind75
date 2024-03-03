@@ -12,7 +12,7 @@ func (w Window) Len() int {
 func minWindow(s string, t string) string {
 	targets := make(map[rune]uint)
 	for _, r := range t {
-		targets[r] += 1
+		targets[r]++
 	}
 
 	currentWindow := make(map[rune]uint)
