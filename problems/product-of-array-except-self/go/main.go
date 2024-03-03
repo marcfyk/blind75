@@ -14,4 +14,6 @@ func productExceptSelf(nums []int) []int {
 		products[i] *= postfixAcc
 		postfixAcc *= nums[i]
 	}
+
+	return products
 }
