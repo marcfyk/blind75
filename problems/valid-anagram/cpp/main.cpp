@@ -8,22 +8,15 @@ public:
       return false;
     }
     std::unordered_map<char, uint> counts(s.size());
-    for (const auto c : s) {
-      if (const auto found = counts.find(c); found == counts.end()) {
-        counts.insert({c, 1});
-      } else {
-        ++found->second;
-      }
+    for (auto i = 0; i < s.size(); ++i) {
+      ++counts[s[i]];
+      --counts[t[i]];
     }
-    for (const auto c : t) {
-      const auto found = counts.find(c);
-      if (found == counts.end()) {
+    for (const auto [_, v] : counts) {
+      if (v != 0) {
         return false;
       }
-      if (--found->second == 0) {
-        counts.erase(found);
-      }
     }
-    return counts.size() == 0;
+    return true;
   }
 };

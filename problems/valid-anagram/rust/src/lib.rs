@@ -4,22 +4,18 @@ pub struct Solution;
 
 impl Solution {
     pub fn is_anagram(s: String, t: String) -> bool {
-        let mut counts = HashMap::new();
-        for c in s.chars() {
-            *counts.entry(c).or_insert(0) += 1;
+        if s.len() != t.len() {
+            return false;
         }
-        for c in t.chars() {
-            match counts.get_mut(&c) {
-                None => return false,
-                Some(count) => {
-                    *count -= 1;
-                    if *count == 0 {
-                        counts.remove(&c);
-                    }
-                }
-            }
-        }
-        counts.len() == 0
+        let sb = s.into_bytes();
+        let tb = t.into_bytes();
+        (0..sb.len())
+            .fold(HashMap::new(), |mut acc, i| {
+                *acc.entry(sb[i]).or_insert(0) += 1;
+                *acc.entry(tb[i]).or_insert(0) -= 1;
+                acc
+            })
+            .into_values()
+            .all(|count| count == 0)
     }
 }
-
