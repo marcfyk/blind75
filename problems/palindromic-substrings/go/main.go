@@ -15,9 +15,9 @@ func expandAndCount(left, right int, rs []rune) int {
 	count := 0
 	l, r := left, right
 	for 0 <= l && r < len(rs) && rs[l] == rs[r] {
-		count += 1
-		l -= 1
-		r += 1
+		count++
+		l--
+		r++
 	}
 	return count
 }
