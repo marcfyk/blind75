@@ -8,11 +8,11 @@ func characterReplacement(s string, k int) int {
 	counts := make([]int, 26)
 	windowBegin := 0
 	for windowEnd, r := range rs {
-		counts[charIndex(r)] += 1
+		counts[charIndex(r)]++
 		windowLength := getWindowLength(windowBegin, windowEnd)
 		if windowLength-slices.Max(counts) > k {
-			counts[charIndex(rs[windowBegin])] -= 1
-			windowBegin += 1
+			counts[charIndex(rs[windowBegin])]--
+			windowBegin++
 		} else {
 			maxLength = max(maxLength, windowLength)
 		}
