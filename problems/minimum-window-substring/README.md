@@ -36,14 +36,14 @@ This will be costly as it will be $O(|T|)$ per verification.
 
 There is an optimized way of verifying $F$ as we shift $l, r$.
 We maintain a histogram character counts of $w$, $H$, and a historgram of character counts in $T$.
-In addition, we have a variable $letters{\_}satisified$ which keeps track of the number of
+In addition, we have a variable $letters\_satisified$ which keeps track of the number of
 characters in $H$ such that $\forall c \in H \land c \in T, \implies H[c] \geq T[c]$.
 This means that it tracks the number of characters that are already satisifed in $T$.
-Therefore, $letters{\_}satisifed = |T| \implies F$.
+Therefore, $letters\_satisifed = |T| \implies F$.
 
 This helps reduce the complexity of verifying $F$.
 Whenever we shift $l$ or $r$, instead of checking $\forall c \in T \implies c \in H \land H[c] \geq T[c]$ in $O(|T|)$,
-we just need to check the latest addition/deletion of a character count in $H$, update $letters_{\_satisfied}$ and check if $letters{\_}satisifed = |T|$ in $O(1)$.
+we just need to check the latest addition/deletion of a character count in $H$, update $letters_\_satisfied$ and check if $letters\_satisifed = |T|$ in $O(1)$.
 
 As we find new $w \implies F$, we just update $W$ if $w$ is a smaller window that $W$.
 
