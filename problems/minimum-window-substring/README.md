@@ -43,7 +43,7 @@ Therefore, $letters\_satisifed = |T| \implies F$.
 
 This helps reduce the complexity of verifying $F$.
 Whenever we shift $l$ or $r$, instead of checking $\forall c \in T \implies c \in H \land H[c] \geq T[c]$ in $O(|T|)$,
-we just need to check the latest addition/deletion of a character count in $H$, update $letters_\_satisfied$ and check if $letters\_satisifed = |T|$ in $O(1)$.
+we just need to check the latest addition/deletion of a character count in $H$, update $letters\_satisfied$ and check if $letters\_satisifed = |T|$ in $O(1)$.
 
 As we find new $w \implies F$, we just update $W$ if $w$ is a smaller window that $W$.
 
